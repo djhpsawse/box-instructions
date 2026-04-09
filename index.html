@@ -1,14 +1,62 @@
 <html>
-  <body style="text-align:center; font-family:Arial;">
+  <head>
+    <style>
+      body {
+        text-align: center;
+        font-family: Arial;
+        background-color: #f0fff4;
+      }
 
-    <h1>Instructions on your new plant</h1>
+      /* Fade-in animation */
+      .fade-in {
+        opacity: 0;
+        animation: fadeIn 2s forwards;
+      }
 
-    <h2>1)</h2>
-    <h3>Pull the tab from underneath the pot that says "pull"</h3>
+      @keyframes fadeIn {
+        to {
+          opacity: 1;
+        }
+      }
+
+      /* Slide-up animation */
+      .slide-up {
+        transform: translateY(50px);
+        opacity: 0;
+        animation: slideUp 1.5s forwards;
+      }
+
+      @keyframes slideUp {
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      /* Image hover effect */
+      img {
+        border-radius: 15px;
+        transition: transform 0.3s ease;
+      }
+
+      img:hover {
+        transform: scale(1.05);
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <h1 class="fade-in">Instructions on your new plant</h1>
+
+    <h2 class="slide-up">1)</h2>
+    <h3 class="slide-up">Pull the tab from underneath the pot that says "pull"</h3>
 
     <br><br>
 
-    <img src="plant.png" width="400">
+    <img class="fade-in" src="plant.png" width="400">
+
+    <p class="fade-in">This is what your plant should look like 🌿</p>
 
   </body>
 </html>
