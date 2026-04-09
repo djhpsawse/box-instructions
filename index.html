@@ -1,79 +1,124 @@
 <html>
   <head>
+    <title>Plant Instructions</title>
     <style>
       body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to bottom, #e8f5e9, #ffffff);
         text-align: center;
-        font-family: Arial;
-        background-color: #f0fff4;
       }
 
-      .fade-in {
-        opacity: 0;
-        animation: fadeIn 2s forwards;
+      header {
+        background: #2e7d32;
+        color: white;
+        padding: 20px;
+        font-size: 28px;
+        font-weight: bold;
       }
 
-      @keyframes fadeIn {
-        to {
-          opacity: 1;
-        }
+      .container {
+        max-width: 800px;
+        margin: auto;
+        padding: 20px;
       }
 
-      .slide-up {
-        transform: translateY(50px);
-        opacity: 0;
-        animation: slideUp 1.5s forwards;
-      }
-
-      @keyframes slideUp {
-        to {
-          transform: translateY(0);
-          opacity: 1;
-        }
+      .card {
+        background: white;
+        border-radius: 20px;
+        padding: 20px;
+        margin: 20px 0;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        animation: fadeInUp 1s ease forwards;
       }
 
       img {
+        width: 100%;
+        max-width: 400px;
         border-radius: 15px;
-        transition: transform 0.3s ease;
-        margin: 10px;
+        margin-top: 10px;
+        transition: transform 0.3s;
       }
 
       img:hover {
         transform: scale(1.05);
+      }
+
+      h2 {
+        color: #2e7d32;
+      }
+
+      p {
+        font-size: 16px;
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(40px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .footer {
+        margin-top: 30px;
+        padding: 15px;
+        font-size: 14px;
+        color: #555;
       }
     </style>
   </head>
 
   <body>
 
-    <h1 class="fade-in">Instructions on your new plant</h1>
+    <header>
+      🌱 Instructions for Your New Plant
+    </header>
 
-    <br>
+    <div class="container">
 
-    <!-- FIRST IMAGE -->
-    <img class="fade-in" src="plant.png" width="400">
+      <!-- INTRO IMAGE -->
+      <div class="card">
+        <img src="plant.png">
+        <p>This is what your plant should look like 🌿</p>
+      </div>
 
-    <br><br>
+      <!-- STEP 1 -->
+      <div class="card">
+        <h2>Step 1</h2>
+        <p>Pull the tab from underneath the pot that says "pull".</p>
+        <img src="photo1.jpg">
+      </div>
 
-    <!-- STEP 1 -->
-    <h2 class="slide-up">1)</h2>
-    <h3 class="slide-up">Pull the tab from underneath the pot that says "pull"</h3>
+      <!-- STEP 2 -->
+      <div class="card">
+        <h2>Step 2</h2>
+        <p>
+          When you pull the tab it will open up the bottom. Then you can plant 
+          it directly into the soil, including the box, because it will decompose 
+          and turn into mulch.
+        </p>
+        <img src="photo2.jpg">
+      </div>
 
-    <p class="fade-in">This is what your plant should look like 🌿</p>
+      <!-- STEP 3 -->
+      <div class="card">
+        <h2>Step 3 💧 Watering</h2>
+        <p>
+          Water your plant regularly to keep the soil moist but not too wet. 
+          Make sure the water reaches the roots and avoid overwatering.
+        </p>
+        <img src="photo3.jpg">
+      </div>
 
-    <!-- PHOTO 1 -->
-    <img class="fade-in" src="photo1.jpg" width="400">
+    </div>
 
-    <br><br>
-
-    <!-- STEP 2 -->
-    <h2 class="slide-up">2)</h2>
-    <h3 class="slide-up">
-      When you pull the tab it will open up the bottom and then you can plant 
-      the plant into the soil including the box because it will decompose and mulch down.
-    </h3>
-
-    <!-- PHOTO 2 -->
-    <img class="fade-in" src="photo2.jpg" width="400">
+    <div class="footer">
+      🌿 Take care of your plant and watch it grow!
+    </div>
 
   </body>
 </html>
